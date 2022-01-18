@@ -1,0 +1,1 @@
+# django_mini_insta_example
