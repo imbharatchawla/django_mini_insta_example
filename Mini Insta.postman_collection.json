@@ -1,0 +1,169 @@
+{
+	"info": {
+		"_postman_id": "b9563ad4-e545-47cf-bddb-f1ab77b8cc5e",
+		"name": "Mini Insta",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "create new album",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_id\": \"xyz123\",\r\n    \"user_name\": \"xyz\",\r\n    \"unique_album_id\": \"xyz@123\",\r\n    \"album_name\": \"Sample\",\r\n    \"status\": \"draft\",\r\n    \"pictures\": [],\r\n    \"hashtag\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/create_album/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"create_album",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "check published album by user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_id\": \"xyz123\"\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/check_published_albums_by_user/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"check_published_albums_by_user",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "follow_hashtag",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_id\": \"xyz123\",\r\n    \"user_name\": \"xyz\",\r\n    \"hashtag\": \"sample\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/follow_hashtag/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"follow_hashtag",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "publish album",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_id\": \"xyz123\",\r\n    \"user_name\": \"xyz\",\r\n    \"unique_album_id\": \"xyz@1234\",\r\n    \"album_name\": \"Sampleb\",\r\n    \"status\": \"publish\",\r\n    \"hashtag\": \"sample\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/publish_album/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"publish_album",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add pictures to album",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_id\": \"xyz123\",\r\n    \"user_name\": \"xyz\",\r\n    \"unique_album_id\": \"xyz@123\",\r\n    \"album_name\": \"Sample\",\r\n    \"status\": \"outbox\",\r\n    \"pictures\": [\r\n        {\r\n            \"picture\": \"base64_image2\",\r\n            \"caption\": \"My Pic\",\r\n            \"font_color\": \"#000fff\",\r\n            \"object-position\": \"center top\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/update_album/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"update_album",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
